@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+/* font weight untuk ketebalan font */
+/* root itu biar bisa dipake disemua, jadi kaya di assign kaya variable terus bisa dipake */
+:root {
+    --yellow: #f4d04e;
+    --white: #ffffff;
+    --black: #111111;
+    --grey: #7f7f7f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* flex untuk ngatur arahnya mau kemana, defaultnya itu row */
+/* justify content center memusatkan element secara horizontal (karena disini center berarti tengah) */
+/* align item center memusatkan element secara vertical (karena disini center berarti tengah) */
+body {
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--white);
+    max-width: 384px;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid var(--black);
+    box-shadow: 8px 8px 0 var(--black);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* disini kalau hover yang terjadi itu transform untuk animasi pergerakan
+    ini sumbu x dan y, berarti sebesar kekiri 8px dan ke atas 8px,
+    kalau box shadow nambahin bayangan, 16px ke kanan dan 16px ke bawah
+
+*/
+.card:hover {
+    transform: translate(-8px, -8px);
+    box-shadow: 16px 16px 0 var(--black);
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tag {
+    background-color: var(--yellow);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.date {
+    color: var(--black);
+    font-size: 14px;
+}
+
+.title {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.title:hover {
+    color: var(--yellow);
+}
+
+.description {
+    color: var(--grey);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.author-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--black);
+}
+
+/* media query untuk responsive design */
+/* Mobile styles */
+@media (max-width: 375px) {
+    .card {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1440px) {
+    .card {
+        margin: 0 auto;
+    }
+}
