@@ -24,22 +24,52 @@ Mobile - 375 size
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/himattheww/frontendmentor-firstchallenge)
-- Live Site URL: [Add live site URL here](https://frontendmentor-firstchallenge.vercel.app/)
+- Solution URL: [Add solution URL here](https://github.com/himattheww/blog-preview-card-main)
+- Live Site URL: [Add live site URL here](https://blog-preview-card-main-matthew-ionwyns-projects.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
+  - Used `<article>` for self-contained content
+  - `<time>` tag for dates
+  - Proper heading hierarchy
 - CSS custom properties
+  - Variables for colors
+  - Font-face for custom fonts
 - Flexbox
-
+  - Centered layout
+  - Card content organization
+- Modern CSS Features
+  - Box-shadow for depth
+  - Transform for hover effects
+  - Smooth transitions
 
 
 ### What I learned
 
-I learn box-shadow, and some tag in html and css
+1. Box Shadow Effects:
+```css
+.card {
+    box-shadow: 8px 8px 0 var(--black);
+}
+```
+
+2. Semantic HTML Structure:
+```html
+
+    Published 21 Dec 2023
+
+```
+
+3. Hover Animations:
+```css
+.card:hover {
+    transform: translate(-8px, -8px);
+    box-shadow: 16px 16px 0 var(--black);
+}
+```
 
 
 ## Author
@@ -52,4 +82,7 @@ I learn box-shadow, and some tag in html and css
 
 ## Acknowledgments
 
-Go do some searching, like what you want to achieve
+Special thanks to:
+- Frontend Mentor for providing this challenge
+- Online resources and documentation that helped in understanding box-shadow and semantic HTML
+- I also provide some comment but in Indonesia
